@@ -1,87 +1,96 @@
-const storageKey = "sondi-suisse-public-2026-v2";
-const pageState = JSON.parse(localStorage.getItem(storageKey) || "{}");
+const DB = 'https://suisse-public-2026-default-rtdb.firebaseio.com/state';
 
-const saveState = () => {
-  localStorage.setItem(storageKey, JSON.stringify(pageState));
-};
+// Write a single value to Firebase
+function save(key, value) {
+  fetch(`${DB}/${key}.json`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(value)
+  });
+}
 
-const updateProgress = () => {
+// Update progress bar on current page
+function updateProgress() {
   const allChecks = [...document.querySelectorAll('input[type="checkbox"]')];
-  const done = allChecks.filter((item) => item.checked).length;
+  const done = allChecks.filter(item => item.checked).length;
   const percent = allChecks.length ? Math.round((done / allChecks.length) * 100) : 0;
 
-  const progressValue = document.getElementById("progressValue");
-  const progressBar = document.getElementById("progressBar");
+  const progressValue = document.getElementById('progressValue');
+  const progressBar = document.getElementById('progressBar');
+  if (progressValue) progressValue.textContent = percent;
+  if (progressBar) progressBar.style.width = `${percent}%`;
+}
 
-  if (progressValue) {
-    progressValue.textContent = percent;
-  }
+// Apply full state snapshot to the page
+function applyState(data) {
+  if (!data) return;
 
-  if (progressBar) {
-    progressBar.style.width = `${percent}%`;
-  }
+  document.querySelectorAll('input[type="checkbox"]').forEach((checkbox, i) => {
+    const key = checkbox.dataset.check || `check-${i}`;
+    if (key in data) checkbox.checked = Boolean(data[key]);
+  });
 
-  document.querySelectorAll(".checklist-card").forEach((card) => {
-    const checks = [...card.querySelectorAll('input[type="checkbox"]')];
-    const checked = checks.filter((item) => item.checked).length;
-    const count = card.querySelector(".count");
-    if (count) {
-      count.textContent = `${checked}/${checks.length}`;
+  document.querySelectorAll('[contenteditable="true"]').forEach(field => {
+    const key = field.dataset.field;
+    if (key && key in data && document.activeElement !== field) {
+      field.textContent = data[key];
     }
   });
-};
 
-document.querySelectorAll('input[type="checkbox"]').forEach((checkbox, index) => {
-  const key = checkbox.dataset.check || `check-${index}`;
-  if (Object.hasOwn(pageState, key)) {
-    checkbox.checked = Boolean(pageState[key]);
+  updateProgress();
+}
+
+// Apply a single key update
+function applyKey(key, value) {
+  const checkbox = document.querySelector(`input[data-check="${key}"]`);
+  if (checkbox) {
+    checkbox.checked = Boolean(value);
+    updateProgress();
+    return;
   }
-  checkbox.addEventListener("change", () => {
-    pageState[key] = checkbox.checked;
-    saveState();
+
+  const field = document.querySelector(`[data-field="${key}"]`);
+  if (field && document.activeElement !== field) {
+    field.textContent = value || '';
+  }
+}
+
+// Real-time listener via Firebase SSE
+const eventSource = new EventSource(`${DB}.json`);
+
+eventSource.addEventListener('put', e => {
+  const { path, data } = JSON.parse(e.data);
+  if (path === '/') {
+    applyState(data);
+  } else {
+    applyKey(path.slice(1), data);
+  }
+});
+
+eventSource.addEventListener('patch', e => {
+  const { data } = JSON.parse(e.data);
+  if (data) {
+    Object.entries(data).forEach(([key, value]) => applyKey(key, value));
+    updateProgress();
+  }
+});
+
+// Checkbox listeners
+document.querySelectorAll('input[type="checkbox"]').forEach((checkbox, i) => {
+  const key = checkbox.dataset.check || `check-${i}`;
+  checkbox.addEventListener('change', () => {
+    save(key, checkbox.checked);
     updateProgress();
   });
 });
 
-document.querySelectorAll('[contenteditable="true"]').forEach((field) => {
+// Contenteditable listeners
+document.querySelectorAll('[contenteditable="true"]').forEach(field => {
   const key = field.dataset.field;
-  if (pageState[key]) {
-    field.textContent = pageState[key];
-  }
-
-  field.addEventListener("input", () => {
-    pageState[key] = field.textContent.trim();
-    saveState();
+  if (!key) return;
+  field.addEventListener('input', () => {
+    save(key, field.textContent.trim());
   });
 });
-
-const notes = document.getElementById("notes");
-if (notes) {
-  notes.value = pageState.notes || "";
-  notes.addEventListener("input", () => {
-    pageState.notes = notes.value;
-    saveState();
-  });
-}
-
-const resetChecks = document.getElementById("resetChecks");
-if (resetChecks) {
-  resetChecks.addEventListener("click", () => {
-    document.querySelectorAll('input[type="checkbox"]').forEach((checkbox, index) => {
-      const key = checkbox.dataset.check || `check-${index}`;
-      checkbox.checked = false;
-      pageState[key] = false;
-    });
-    saveState();
-    updateProgress();
-  });
-}
-
-const printPage = document.getElementById("printPage");
-if (printPage) {
-  printPage.addEventListener("click", () => {
-    window.print();
-  });
-}
 
 updateProgress();
