@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SONDI Aussenstand | Suisse Public 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="suisse-public-2026.css">
+  </head>
+  <body>
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="suisse-public-2026.html" aria-label="SONDI.CH Startseite">
+          <img src="Logo sondi.ch_RGB.jpg" alt="SONDI.CH Logo" onerror="this.parentElement.classList.add('logo-missing')">
+          <span>SONDI.CH</span>
+        </a>
+        <nav aria-label="Seitennavigation">
+          <a href="suisse-public-2026.html">Übersicht</a>
+          <a href="pag-innenstand.html">PAG Innenstand</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="infos">
+        <div class="hero-copy">
+          <h1>SONDI Aussenstand</h1>
+          <div class="hero-actions">
+            <a class="primary-action" href="gelandeplan-freigelaende-mitte.pdf" target="_blank" rel="noreferrer">Geländeplan PDF</a>
+            <a class="secondary-action" href="technisches-dossier-sondi-aussenstand.pdf" target="_blank" rel="noreferrer">Standübersicht PDF</a>
+          </div>
+        </div>
+        <aside class="status-panel" aria-label="Projekt Kennzahlen">
+          <div>
+            <span class="label">Datum</span>
+            <strong>16.-19. Juni 2026</strong>
+          </div>
+          <div>
+            <span class="label">Stand</span>
+            <strong>Nr. 220, Freigelände Mitte</strong>
+          </div>
+          <div>
+            <span class="label">Pendenzen</span>
+            <strong><span id="progressValue">0</span>% erledigt</strong>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <span id="progressBar"></span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="quick-grid two-col-grid" aria-label="Stand-Informationen">
+        <article>
+          <h2>Stand: 220</h2>
+          <p>Bereich: Freigelände Mitte<br>Standtyp: Freigelände<br>Vier offene Seiten</p>
+        </article>
+        <article>
+          <h2>Abmessung</h2>
+          <p>100 m²<br>10 m x 10 m</p>
+        </article>
+      </section>
+
+      <section class="table-section" id="maschinen">
+        <div class="section-head compact">
+          <h2>Maschinen-Liste</h2>
+        </div>
+        <div class="notice" style="margin-bottom: 14px;">
+          Abklären, ob Artikel-Nr. 1.112.350 auch noch dazu kommt.
+        </div>
+        <div class="data-table machine-table" role="table" aria-label="Maschinen-Liste">
+          <div class="table-head" role="row">
+            <span role="columnheader">Gepackt</span>
+            <span role="columnheader">Bezeichnung</span>
+            <span role="columnheader">Artikel-Nr.</span>
+            <span role="columnheader">Kategorie</span>
+            <span role="columnheader">Bemerkung</span>
+          </div>
+          <div role="row"><span><input type="checkbox" data-check="packed-nilfisk-mh45"></span><span>Nilfisk MH 45M-200/960 FAX 400/3/50 EU</span><span>107147105</span><span>Hochdruckreiniger</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="packed-dibo-trailer"></span><span>DiBO Trailer</span><span>offen</span><span>Hochdruckreiniger</span><span>Wird von Andreas Fellmann mitgebracht</span></div>
+          <div role="row"><span><input type="checkbox" data-check="packed-sondi-weed-10"></span><span>SONDI WEED 1.0</span><span>SAG770</span><span>Unkrautbeseitiger</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="packed-sondi-weed-20"></span><span>SONDI WEED 2.0</span><span>SAG771</span><span>Unkrautbeseitiger</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="packed-keckex-mobi"></span><span>KECKEX MOBI 230V-11L</span><span>KS-000-062</span><span>Unkrautbeseitiger</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="packed-keckex-jespi"></span><span>KECKEX JESPI-M13</span><span>KS-000-010</span><span>Unkrautbeseitiger</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="packed-fiat-panda"></span><span>Fiat Panda</span><span>offen</span><span>–</span><span>Transport und Rücktransport klären</span></div>
+          <div class="sub-row" role="row"><span><input type="checkbox" data-check="packed-solemaster-3000"></span><span class="sub-item">SoleMASTER 3000 SM 3.0</span><span>S-25/2.0-34</span><span>Winterdienst</span><span>Angehängt an Fiat Panda</span></div>
+          <div class="sub-row" role="row"><span><input type="checkbox" data-check="packed-rontex-ecoplow"></span><span class="sub-item">Rontex ECOPLOW SW 0</span><span>offen</span><span>Winterdienst</span><span>Angehängt an Fiat Panda</span></div>
+          <div role="row"><span><input type="checkbox" data-check="packed-solemaster-mini"></span><span>SoleMASTER MINI SM 1.0</span><span>S-25/01-10</span><span>Winterdienst</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="packed-lanzen"></span><span>Diverse Lanzen</span><span>offen</span><span>Zubehör</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="packed-flaechenreiniger"></span><span>Flächenreiniger</span><span>offen</span><span>Zubehör</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="packed-schlauchwand"></span><span>Schlauchwand mit Schlauchaufrollern</span><span>offen</span><span>Schlauchaufroller</span><span>Aktuell im Showroom</span></div>
+          <div role="row"><span><input type="checkbox" data-check="packed-mosmatic-produkte"></span><span>Mosmatic Produkte</span><span>offen</span><span>Zubehör</span><span>Genaue Produkte noch nicht definiert</span></div>
+        </div>
+      </section>
+
+
+      <section class="info-band" id="standskizze">
+        <div class="section-head compact">
+          <h2>Standskizze</h2>
+        </div>
+        <div class="notice">
+          Vorläufige Skizze — Änderungen vorbehalten. Die tatsächliche Positionierung der Maschinen kann sich noch ändern.
+        </div>
+        <img src="Standsskizze%20SAG.png" alt="Standskizze SONDI Aussenstand" style="display:block; max-width:100%; border-radius:var(--radius); margin-top:18px;">
+      </section>
+
+      <section class="table-section" id="materialliste">
+        <div class="section-head compact">
+          <h2>Materialliste</h2>
+        </div>
+        <div class="data-table material-table" role="table" aria-label="Materialliste" style="margin-top: 18px;">
+          <div class="table-head" role="row">
+            <span role="columnheader">Bereit</span>
+            <span role="columnheader">Material</span>
+            <span role="columnheader">Anzahl</span>
+            <span role="columnheader">Kategorie</span>
+            <span role="columnheader">Bemerkung</span>
+          </div>
+
+          <!-- Stand & Einrichtung -->
+          <div role="row"><span><input type="checkbox" data-check="mat-zelt"></span><span>SONDI Zelt</span><span contenteditable="true" data-field="anz-zelt">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-zelt"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-fahne"></span><span>SONDI Fahne</span><span contenteditable="true" data-field="anz-fahne">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-fahne"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-stehtisch"></span><span>Stehtisch</span><span contenteditable="true" data-field="anz-stehtisch">2</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-stehtisch"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-stuehle"></span><span>Stühle</span><span contenteditable="true" data-field="anz-stuehle">4</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-stuehle"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-bar"></span><span>Bar</span><span contenteditable="true" data-field="anz-bar">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-bar"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-abfalleimer"></span><span>Abfalleimer</span><span contenteditable="true" data-field="anz-abfalleimer">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-abfalleimer"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-abfallsaecke"></span><span>Abfallsäcke</span><span contenteditable="true" data-field="anz-abfallsaecke">10</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-abfallsaecke"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-prospekthalter"></span><span>Prospekthalter</span><span contenteditable="true" data-field="anz-prospekthalter">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-prospekthalter"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-liegestuhl"></span><span>SONDI Liegestühl</span><span contenteditable="true" data-field="anz-liegestuhl">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-liegestuhl"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-verlaengerung"></span><span>Verlängerungskabel &amp; Mehrsteckfachdose</span><span contenteditable="true" data-field="anz-verlaengerung">3</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-verlaengerung"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-bildschirm"></span><span>Bildschirm</span><span contenteditable="true" data-field="anz-bildschirm">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-bildschirm"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-bildschirm-kabel"></span><span>Ladekabel für Bildschirm</span><span contenteditable="true" data-field="anz-bildschirm-kabel">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-bildschirm-kabel"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-hdmi"></span><span>HDMI Kabel für Bildschirm</span><span contenteditable="true" data-field="anz-hdmi">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-hdmi"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-tv"></span><span>TV</span><span contenteditable="true" data-field="anz-tv">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="bem-tv"></span></div>
+
+          <!-- Werbemittel -->
+          <div role="row"><span><input type="checkbox" data-check="mat-maschinenbeschriftungen"></span><span>Maschinenbeschriftungen</span><span contenteditable="true" data-field="anz-maschinenbeschriftungen">10</span><span>Werbemittel</span><span contenteditable="true" data-field="bem-maschinenbeschriftungen"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-kundengeschenke"></span><span>Kundengeschenke</span><span contenteditable="true" data-field="anz-kundengeschenke"></span><span>Werbemittel</span><span contenteditable="true" data-field="bem-kundengeschenke">Appenzeller Biber &amp; Shots</span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-visitenkarten"></span><span>Visitenkarten</span><span contenteditable="true" data-field="anz-visitenkarten"></span><span>Werbemittel</span><span contenteditable="true" data-field="bem-visitenkarten">Mitarbeiter sollen mitnehmen</span></div>
+
+          <!-- Drucksachen -->
+          <div role="row"><span><input type="checkbox" data-check="mat-messeformular"></span><span>Messeformular Blätter (für Leads)</span><span contenteditable="true" data-field="anz-messeformular">100</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-messeformular"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-bro-keckex-jespi"></span><span>KECKEX JESPI Broschüren</span><span contenteditable="true" data-field="anz-bro-keckex-jespi">80</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-bro-keckex-jespi"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-bro-keckex-mobi"></span><span>KECKEX MOBI Broschüren</span><span contenteditable="true" data-field="anz-bro-keckex-mobi">80</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-bro-keckex-mobi"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-bro-unkraut"></span><span>SONDI Unkrautbeseitiger Broschüren</span><span contenteditable="true" data-field="anz-bro-unkraut">80</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-bro-unkraut"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-bro-nilfisk"></span><span>Nilfisk Clean-Live Broschüren</span><span contenteditable="true" data-field="anz-bro-nilfisk">80</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-bro-nilfisk"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-bro-dibo"></span><span>SONDI DiBO-Broschüren</span><span contenteditable="true" data-field="anz-bro-dibo">80</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-bro-dibo"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-bro-winterdienst"></span><span>Winterdienst Broschüren</span><span contenteditable="true" data-field="anz-bro-winterdienst">80</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-bro-winterdienst"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-bro-sondi"></span><span>SONDI Broschüren</span><span contenteditable="true" data-field="anz-bro-sondi">80</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-bro-sondi">50 davon auch für PAG Stand einplanen</span></div>
+
+          <!-- Verpflegung -->
+          <div role="row"><span><input type="checkbox" data-check="mat-kaffeemaschine"></span><span>Kaffeemaschine</span><span contenteditable="true" data-field="anz-kaffeemaschine">1</span><span>Verpflegung</span><span contenteditable="true" data-field="bem-kaffeemaschine"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-kaffeekapseln"></span><span>Kaffeekapseln</span><span contenteditable="true" data-field="anz-kaffeekapseln">6 Schachteln</span><span>Verpflegung</span><span contenteditable="true" data-field="bem-kaffeekapseln"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-rahm"></span><span>Rahm</span><span contenteditable="true" data-field="anz-rahm">6 Packungen</span><span>Verpflegung</span><span contenteditable="true" data-field="bem-rahm"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-zucker"></span><span>Zucker</span><span contenteditable="true" data-field="anz-zucker">2 Pack</span><span>Verpflegung</span><span contenteditable="true" data-field="bem-zucker"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-ruehrstaebchen"></span><span>Rührstäbchen</span><span contenteditable="true" data-field="anz-ruehrstaebchen">2 Pack</span><span>Verpflegung</span><span contenteditable="true" data-field="bem-ruehrstaebchen"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-servietten"></span><span>Servietten</span><span contenteditable="true" data-field="anz-servietten">2 Pack</span><span>Verpflegung</span><span contenteditable="true" data-field="bem-servietten"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-becher"></span><span>Becher für Kaffee</span><span contenteditable="true" data-field="anz-becher"></span><span>Verpflegung</span><span contenteditable="true" data-field="bem-becher"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-getraenke"></span><span>Getränke für Mitarbeiter</span><span contenteditable="true" data-field="anz-getraenke"></span><span>Verpflegung</span><span contenteditable="true" data-field="bem-getraenke"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-reinigungstuecher"></span><span>Reinigungstücher</span><span contenteditable="true" data-field="anz-reinigungstuecher">8 Rollen</span><span>Verpflegung</span><span contenteditable="true" data-field="bem-reinigungstuecher"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-reinigungsmittel"></span><span>Reinigungsmittel</span><span contenteditable="true" data-field="anz-reinigungsmittel">1</span><span>Verpflegung</span><span contenteditable="true" data-field="bem-reinigungsmittel"></span></div>
+
+          <!-- Diverses -->
+          <div role="row"><span><input type="checkbox" data-check="mat-bostich"></span><span>Bostich &amp; Heftklammer</span><span contenteditable="true" data-field="anz-bostich"></span><span>Diverses</span><span contenteditable="true" data-field="bem-bostich"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-schreibzeuge"></span><span>Schreibzeuge</span><span contenteditable="true" data-field="anz-schreibzeuge"></span><span>Diverses</span><span contenteditable="true" data-field="bem-schreibzeuge"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-notizblock"></span><span>Notizblöcke</span><span contenteditable="true" data-field="anz-notizblock"></span><span>Diverses</span><span contenteditable="true" data-field="bem-notizblock"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-laptop"></span><span>Laptop</span><span contenteditable="true" data-field="anz-laptop"></span><span>Diverses</span><span contenteditable="true" data-field="bem-laptop">Mitarbeiter sollen mitnehmen</span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-laptop-kabel"></span><span>Laptop Ladekabel</span><span contenteditable="true" data-field="anz-laptop-kabel"></span><span>Diverses</span><span contenteditable="true" data-field="bem-laptop-kabel">Mitarbeiter sollen mitnehmen</span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-klebeband"></span><span>Klebeband</span><span contenteditable="true" data-field="anz-klebeband"></span><span>Diverses</span><span contenteditable="true" data-field="bem-klebeband"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-kabelbinder"></span><span>Kabelbinder</span><span contenteditable="true" data-field="anz-kabelbinder"></span><span>Diverses</span><span contenteditable="true" data-field="bem-kabelbinder"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-schere"></span><span>Schere</span><span contenteditable="true" data-field="anz-schere"></span><span>Diverses</span><span contenteditable="true" data-field="bem-schere"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-werkzeugkiste"></span><span>Werkzeugkiste</span><span contenteditable="true" data-field="anz-werkzeugkiste"></span><span>Diverses</span><span contenteditable="true" data-field="bem-werkzeugkiste"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-silikonspray"></span><span>Silikonspray</span><span contenteditable="true" data-field="anz-silikonspray"></span><span>Diverses</span><span contenteditable="true" data-field="bem-silikonspray"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="mat-edelstahlspray"></span><span>Edelstahlspray</span><span contenteditable="true" data-field="anz-edelstahlspray"></span><span>Diverses</span><span contenteditable="true" data-field="bem-edelstahlspray"></span></div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="suisse-public-2026.js"></script>
+  </body>
+</html>

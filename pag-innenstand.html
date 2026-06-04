@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PAG Innenstand | Suisse Public 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="suisse-public-2026.css">
+  </head>
+  <body>
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="suisse-public-2026.html" aria-label="SONDI.CH Startseite">
+          <img src="Logo sondi.ch_RGB.jpg" alt="SONDI.CH Logo" onerror="this.parentElement.classList.add('logo-missing')">
+          <span>SONDI.CH</span>
+        </a>
+        <nav aria-label="Seitennavigation">
+          <a href="suisse-public-2026.html">Übersicht</a>
+          <a href="sondi-aussenstand.html">SONDI Aussenstand</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="infos">
+        <div class="hero-copy">
+          <h1>PAG Innenstand</h1>
+          <div class="hero-actions">
+            <a class="primary-action" href="SPU26_Halle_3.0.pdf" target="_blank" rel="noreferrer">Hallenplan PDF</a>
+            <a class="secondary-action" href="Spu_Tech-Ver%20HA_193311_20260505111427_W0244836.pdf" target="_blank" rel="noreferrer">Standübersicht PDF</a>
+          </div>
+        </div>
+        <aside class="status-panel" aria-label="Projekt Kennzahlen">
+          <div>
+            <span class="label">Datum</span>
+            <strong>16.–19. Juni 2026</strong>
+          </div>
+          <div>
+            <span class="label">Stand</span>
+            <strong>E01, Halle 3.0</strong>
+          </div>
+          <div>
+            <span class="label">Pendenzen</span>
+            <strong><span id="progressValue">0</span>% erledigt</strong>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <span id="progressBar"></span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="quick-grid two-col-grid" aria-label="Stand-Informationen">
+        <article>
+          <h2>Stand: E01</h2>
+          <p>Bereich: Halle 3.0<br>Standtyp: Innenstand</p>
+        </article>
+        <article>
+          <h2>Abmessung</h2>
+          <p>24 m²<br>4 m × 6 m</p>
+        </article>
+      </section>
+
+      <section class="table-section" id="maschinen">
+        <div class="section-head compact">
+          <h2>Maschinen-Liste</h2>
+        </div>
+        <div class="data-table machine-table" role="table" aria-label="Maschinen-Liste">
+          <div class="table-head" role="row">
+            <span role="columnheader">Gepackt</span>
+            <span role="columnheader">Bezeichnung</span>
+            <span role="columnheader">Artikel-Nr.</span>
+            <span role="columnheader">Kategorie</span>
+            <span role="columnheader">Bemerkung</span>
+          </div>
+
+          <!-- Bodenreiniger -->
+          <div role="row"><span><input type="checkbox" data-check="pag-willmop35"></span><span>TSM Willmop 35</span><span>3803 001</span><span>Bodenreiniger</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-willmop50"></span><span>TSM Willmop 50</span><span>3804 0004</span><span>Bodenreiniger</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-nilfisk-dryft"></span><span>Nilfisk Dryft</span><span>58002000</span><span>Bodenreiniger</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-gansow-gmatic"></span><span>Gansow Gmatic 50 BTX 60</span><span>offen</span><span>Bodenreiniger</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-grande-brio45"></span><span>TSM Grande Brio 45 BT</span><span>3852 0007</span><span>Bodenreiniger</span><span></span></div>
+
+
+          <!-- Sauger -->
+          <div role="row"><span><input type="checkbox" data-check="pag-ronda200"></span><span>RONDA 200 H</span><span>S1226</span><span>Sauger</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-attix751"></span><span>Nilfisk ATTIX 751-61</span><span>302001527</span><span>Sauger</span><span></span></div>
+
+          <!-- städtische RMn -->
+          <div role="row"><span><input type="checkbox" data-check="pag-aria240"></span><span>TSM ARIA 240 SUPER</span><span>3621 0023</span><span>städtische RM</span><span></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-itala135"></span><span>TSM ITALA 135</span><span>offen</span><span>städtische RM</span><span></span></div>
+
+          <!-- Diverses -->
+          <div role="row"><span><input type="checkbox" data-check="pag-dispenserwand"></span><span>Dispenserwand mit Papierrollen</span><span>–</span><span>Diverses</span><span>Vom Showraum nehmen</span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-bodenstaender"></span><span>Diverse Bodenständer mit Papierrollen</span><span>–</span><span>Diverses</span><span>Vom Showraum nehmen</span></div>
+        </div>
+      </section>
+
+      <section class="info-band" id="standskizze">
+        <div class="section-head compact">
+          <h2>Standskizze</h2>
+        </div>
+        <div class="notice">
+          Provisorische Skizze — vor Ort schauen, wie es am besten aussieht.
+        </div>
+        <div class="notice" style="margin-top: 8px;">
+          Die Lagerzone befindet sich hinter der Dispenserwand.
+        </div>
+        <img src="Standsskizze%20PAG.png" alt="Standskizze PAG Innenstand" style="display:block; max-width:100%; border-radius:var(--radius); margin-top:18px;">
+      </section>
+
+      <section class="table-section" id="materialliste">
+        <div class="section-head compact">
+          <h2>Materialliste</h2>
+        </div>
+        <div class="data-table material-table" role="table" aria-label="Materialliste" style="margin-top: 18px;">
+          <div class="table-head" role="row">
+            <span role="columnheader">Bereit</span>
+            <span role="columnheader">Material</span>
+            <span role="columnheader">Anzahl</span>
+            <span role="columnheader">Kategorie</span>
+            <span role="columnheader">Bemerkung</span>
+          </div>
+
+          <!-- Stand & Einrichtung -->
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-messewand-klein"></span><span>Kleine Messewand</span><span contenteditable="true" data-field="pag-anz-messewand-klein">2</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="pag-bem-messewand-klein"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-messewand-gross"></span><span>Grosse Messewand</span><span contenteditable="true" data-field="pag-anz-messewand-gross">2</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="pag-bem-messewand-gross"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-fahne"></span><span>SONDI Fahne</span><span contenteditable="true" data-field="pag-anz-fahne">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="pag-bem-fahne"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-stehtisch"></span><span>Stehtisch</span><span contenteditable="true" data-field="pag-anz-stehtisch">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="pag-bem-stehtisch"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-stuehle"></span><span>Stühle</span><span contenteditable="true" data-field="pag-anz-stuehle">2</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="pag-bem-stuehle"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-abfalleimer"></span><span>Abfalleimer</span><span contenteditable="true" data-field="pag-anz-abfalleimer">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="pag-bem-abfalleimer"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-abfallsaecke"></span><span>Abfallsäcke</span><span contenteditable="true" data-field="pag-anz-abfallsaecke">5</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="pag-bem-abfallsaecke"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-prospekthalter"></span><span>Prospekthalter</span><span contenteditable="true" data-field="pag-anz-prospekthalter">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="pag-bem-prospekthalter"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-verlaengerung"></span><span>Verlängerungskabel &amp; Mehrsteckfachdose</span><span contenteditable="true" data-field="pag-anz-verlaengerung">1</span><span>Stand &amp; Einrichtung</span><span contenteditable="true" data-field="pag-bem-verlaengerung"></span></div>
+
+          <!-- Werbemittel -->
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-maschinenbeschriftungen"></span><span>Maschinenbeschriftungen</span><span contenteditable="true" data-field="pag-anz-maschinenbeschriftungen">10</span><span>Werbemittel</span><span contenteditable="true" data-field="pag-bem-maschinenbeschriftungen"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-kundengeschenke"></span><span>Kundengeschenke</span><span contenteditable="true" data-field="pag-anz-kundengeschenke"></span><span>Werbemittel</span><span contenteditable="true" data-field="pag-bem-kundengeschenke">Appenzeller Biber &amp; Shots</span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-visitenkarten"></span><span>Visitenkarten</span><span contenteditable="true" data-field="pag-anz-visitenkarten"></span><span>Werbemittel</span><span contenteditable="true" data-field="pag-bem-visitenkarten">Mitarbeiter sollen mitnehmen</span></div>
+
+          <!-- Drucksachen -->
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-messeformular"></span><span>Messeformular Blätter (für Leads)</span><span contenteditable="true" data-field="pag-anz-messeformular">100</span><span>Drucksachen</span><span contenteditable="true" data-field="pag-bem-messeformular"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-bro-grande-brio"></span><span>TSM Grande Brio 45 Broschüren</span><span contenteditable="true" data-field="pag-anz-bro-grande-brio">50</span><span>Drucksachen</span><span contenteditable="true" data-field="pag-bem-bro-grande-brio"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-bro-aria"></span><span>TSM ARIA Broschüren</span><span contenteditable="true" data-field="pag-anz-bro-aria">50</span><span>Drucksachen</span><span contenteditable="true" data-field="pag-bem-bro-aria"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-bro-itala"></span><span>TSM ITALA Broschüren</span><span contenteditable="true" data-field="pag-anz-bro-itala">50</span><span>Drucksachen</span><span contenteditable="true" data-field="pag-bem-bro-itala"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-bro-nilfisk"></span><span>Nilfisk Clean-Live Broschüren</span><span contenteditable="true" data-field="pag-anz-bro-nilfisk">20</span><span>Drucksachen</span><span contenteditable="true" data-field="pag-bem-bro-nilfisk"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-bro-willmop35"></span><span>Willmop 35 Broschüren</span><span contenteditable="true" data-field="pag-anz-bro-willmop35">50</span><span>Drucksachen</span><span contenteditable="true" data-field="pag-bem-bro-willmop35"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-bro-willmop50"></span><span>Willmop 50 Broschüren</span><span contenteditable="true" data-field="pag-anz-bro-willmop50">50</span><span>Drucksachen</span><span contenteditable="true" data-field="pag-bem-bro-willmop50"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-bro-dryft"></span><span>Nilfisk Dryft Broschüren</span><span contenteditable="true" data-field="pag-anz-bro-dryft">50</span><span>Drucksachen</span><span contenteditable="true" data-field="pag-bem-bro-dryft"></span></div>
+
+          <!-- Verpflegung -->
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-kaffeemaschine"></span><span>Kaffeemaschine</span><span contenteditable="true" data-field="pag-anz-kaffeemaschine">1</span><span>Verpflegung</span><span contenteditable="true" data-field="pag-bem-kaffeemaschine"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-kaffeekapseln"></span><span>Kaffeekapseln</span><span contenteditable="true" data-field="pag-anz-kaffeekapseln">3 Schachteln</span><span>Verpflegung</span><span contenteditable="true" data-field="pag-bem-kaffeekapseln"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-rahm"></span><span>Rahm</span><span contenteditable="true" data-field="pag-anz-rahm">3 Packungen</span><span>Verpflegung</span><span contenteditable="true" data-field="pag-bem-rahm"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-zucker"></span><span>Zucker</span><span contenteditable="true" data-field="pag-anz-zucker">1 Pack</span><span>Verpflegung</span><span contenteditable="true" data-field="pag-bem-zucker"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-ruehrstaebchen"></span><span>Rührstäbchen</span><span contenteditable="true" data-field="pag-anz-ruehrstaebchen">1 Pack</span><span>Verpflegung</span><span contenteditable="true" data-field="pag-bem-ruehrstaebchen"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-servietten"></span><span>Servietten</span><span contenteditable="true" data-field="pag-anz-servietten">1 Pack</span><span>Verpflegung</span><span contenteditable="true" data-field="pag-bem-servietten"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-becher"></span><span>Becher für Kaffee</span><span contenteditable="true" data-field="pag-anz-becher"></span><span>Verpflegung</span><span contenteditable="true" data-field="pag-bem-becher"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-getraenke"></span><span>Getränke für Mitarbeiter</span><span contenteditable="true" data-field="pag-anz-getraenke"></span><span>Verpflegung</span><span contenteditable="true" data-field="pag-bem-getraenke"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-reinigungstuecher"></span><span>Reinigungstücher</span><span contenteditable="true" data-field="pag-anz-reinigungstuecher">4 Rollen</span><span>Verpflegung</span><span contenteditable="true" data-field="pag-bem-reinigungstuecher"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-reinigungsmittel"></span><span>Reinigungsmittel</span><span contenteditable="true" data-field="pag-anz-reinigungsmittel">1</span><span>Verpflegung</span><span contenteditable="true" data-field="pag-bem-reinigungsmittel"></span></div>
+
+          <!-- Diverses -->
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-bostich"></span><span>Bostich &amp; Heftklammer</span><span contenteditable="true" data-field="pag-anz-bostich"></span><span>Diverses</span><span contenteditable="true" data-field="pag-bem-bostich"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-schreibzeuge"></span><span>Schreibzeuge</span><span contenteditable="true" data-field="pag-anz-schreibzeuge"></span><span>Diverses</span><span contenteditable="true" data-field="pag-bem-schreibzeuge"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-notizblock"></span><span>Notizblöcke</span><span contenteditable="true" data-field="pag-anz-notizblock"></span><span>Diverses</span><span contenteditable="true" data-field="pag-bem-notizblock"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-klebeband"></span><span>Klebeband</span><span contenteditable="true" data-field="pag-anz-klebeband"></span><span>Diverses</span><span contenteditable="true" data-field="pag-bem-klebeband"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-kabelbinder"></span><span>Kabelbinder</span><span contenteditable="true" data-field="pag-anz-kabelbinder"></span><span>Diverses</span><span contenteditable="true" data-field="pag-bem-kabelbinder"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-schere"></span><span>Schere</span><span contenteditable="true" data-field="pag-anz-schere"></span><span>Diverses</span><span contenteditable="true" data-field="pag-bem-schere"></span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-laptop"></span><span>Laptop</span><span contenteditable="true" data-field="pag-anz-laptop"></span><span>Diverses</span><span contenteditable="true" data-field="pag-bem-laptop">Mitarbeiter sollen mitnehmen</span></div>
+          <div role="row"><span><input type="checkbox" data-check="pag-mat-laptop-kabel"></span><span>Laptop Ladekabel</span><span contenteditable="true" data-field="pag-anz-laptop-kabel"></span><span>Diverses</span><span contenteditable="true" data-field="pag-bem-laptop-kabel">Mitarbeiter sollen mitnehmen</span></div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="suisse-public-2026.js"></script>
+  </body>
+</html>
