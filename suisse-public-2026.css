@@ -925,6 +925,16 @@ li + li {
   position: absolute;
 }
 
+.row-to-oega span {
+  background: rgba(16, 149, 100, 0.07) !important;
+  border-top-color: rgba(16, 149, 100, 0.2) !important;
+}
+
+.row-from-sp span {
+  background: rgba(242, 113, 29, 0.07) !important;
+  border-top-color: rgba(242, 113, 29, 0.2) !important;
+}
+
 .data-table .table-head span {
   background: var(--blue);
   border-top: 0;
