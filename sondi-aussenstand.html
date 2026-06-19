@@ -8,6 +8,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="suisse-public-2026.css">
+    <style>
+      #maschinen .data-table div:not(.table-head) span,
+      #materialliste .data-table div:not(.table-head) span {
+        background: rgba(25, 135, 84, 0.07) !important;
+        border-top-color: rgba(25, 135, 84, 0.2) !important;
+      }
+      #maschinen .data-table div.row-red:not(.table-head) span,
+      #materialliste .data-table div.row-red:not(.table-head) span {
+        background: rgba(220, 53, 69, 0.07) !important;
+        border-top-color: rgba(220, 53, 69, 0.2) !important;
+      }
+    </style>
   </head>
   <body>
 
@@ -68,6 +80,10 @@
           <h2>Maschinen-Liste</h2>
         </div>
 
+        <div class="machine-legend">
+          <div class="leg-item"><span class="leg-dot red"></span>Mitnehmen nach Herisau — Fr. 19. Juni</div>
+          <div class="leg-item"><span class="leg-dot green"></span>Mitnehmen nach ÖGA</div>
+        </div>
         <div class="data-table machine-table" role="table" aria-label="Maschinen-Liste">
           <div class="table-head" role="row">
             <span role="columnheader">Gepackt</span>
@@ -76,7 +92,7 @@
             <span role="columnheader">Kategorie</span>
             <span role="columnheader">Bemerkung</span>
           </div>
-          <div role="row"><span><input type="checkbox" data-check="packed-nilfisk-mh45"></span><span>Nilfisk MH 45M-200/960 FAX 400/3/50 EU</span><span>107147105</span><span>Hochdruckreiniger</span><span></span></div>
+          <div class="row-red" role="row"><span><input type="checkbox" data-check="packed-nilfisk-mh45"></span><span>Nilfisk MH 45M-200/960 FAX 400/3/50 EU</span><span>107147105</span><span>Hochdruckreiniger</span><span></span></div>
           <div role="row"><span><input type="checkbox" data-check="packed-dibo-trailer"></span><span>DiBO Trailer</span><span>offen</span><span>Hochdruckreiniger</span><span></span></div>
           <div role="row"><span><input type="checkbox" data-check="packed-dibo-ptl-s"></span><span>DiBO PTL-S 150/11B</span><span>offen</span><span>Hochdruckreiniger</span><span></span></div>
           <div role="row"><span><input type="checkbox" data-check="packed-dibo-ecn-s"></span><span>DiBO ECN-S 210/15</span><span>offen</span><span>Hochdruckreiniger</span><span>inkl. 1.205.020 Schlauchtrommel inkl. 20 m HD Schlauch ECN-S (ab Werk)</span></div>
@@ -111,6 +127,10 @@
         <div class="section-head compact">
           <h2>Materialliste</h2>
         </div>
+        <div class="machine-legend" style="margin-top:14px;">
+          <div class="leg-item"><span class="leg-dot red"></span>Mitnehmen nach Herisau — Fr. 19. Juni</div>
+          <div class="leg-item"><span class="leg-dot green"></span>Mitnehmen nach ÖGA</div>
+        </div>
         <div class="data-table material-table" role="table" aria-label="Materialliste" style="margin-top: 18px;">
           <div class="table-head" role="row">
             <span role="columnheader">Bereit</span>
@@ -141,7 +161,7 @@
           <div role="row"><span><input type="checkbox" data-check="mat-kundengeschenke"></span><span>Kundengeschenke</span><span contenteditable="true" data-field="anz-kundengeschenke"></span><span>Werbemittel</span><span contenteditable="true" data-field="bem-kundengeschenke">Appenzeller Biber &amp; Shots</span></div>
 
           <!-- Drucksachen -->
-          <div role="row"><span><input type="checkbox" data-check="mat-messeformular"></span><span>Messeformular Blätter (für Leads)</span><span contenteditable="true" data-field="anz-messeformular">100</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-messeformular"></span></div>
+          <div class="row-red" role="row"><span><input type="checkbox" data-check="mat-messeformular"></span><span>Messeformular Blätter (für Leads)</span><span contenteditable="true" data-field="anz-messeformular">100</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-messeformular"></span></div>
           <div role="row"><span><input type="checkbox" data-check="mat-bro-keckex-jespi"></span><span>KECKEX JESPI Broschüren</span><span contenteditable="true" data-field="anz-bro-keckex-jespi">80</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-bro-keckex-jespi"></span></div>
           <div role="row"><span><input type="checkbox" data-check="mat-bro-keckex-mobi"></span><span>KECKEX MOBI Broschüren</span><span contenteditable="true" data-field="anz-bro-keckex-mobi">80</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-bro-keckex-mobi"></span></div>
           <div role="row"><span><input type="checkbox" data-check="mat-bro-unkraut"></span><span>SONDI Unkrautbeseitiger Broschüren</span><span contenteditable="true" data-field="anz-bro-unkraut">80</span><span>Drucksachen</span><span contenteditable="true" data-field="bem-bro-unkraut"></span></div>
